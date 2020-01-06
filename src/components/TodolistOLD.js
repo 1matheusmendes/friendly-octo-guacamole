@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TodoForm from './TodoForm';
 
 export default class Todolist extends Component {
     constructor(props){
@@ -28,6 +29,7 @@ export default class Todolist extends Component {
             <div>
                 <input type="text" name="todo" placeholder="Entre com seu todo" onChange={this.onChange}/>
                 <button type="button" onClick={this.clickParaEnviar}>Enviar</button>
+                <TodoForm />
                 <hr/>
 
                 <ul>
