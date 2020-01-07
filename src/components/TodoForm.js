@@ -13,7 +13,10 @@ export default class TodoForm extends Component{
 
         const {todo} = this.state;
         if(todo){
-            //this.props.clickParaEnviar(todo);    
+            this.props.clickParaEnviar(todo);
+            this.setState({
+                todo: ''
+            });  
         }
     }
 
@@ -21,10 +24,15 @@ export default class TodoForm extends Component{
         this.setState({todo: event.target.value});
     }
     render(){
+        const { todo } = this.state;
         return(
             <div>
-                <input type="text" name="todo" placeholder="Entre com seu todo" onChange={this.onChange}/>
-                <button type="button" onClick={this.addOn}>Enviar</button>
+                <div className="form-group">
+                    <input type="text" className="form-control" value={todo} name="todo" placeholder="Enter todo here" onChange={this.onChange}/>
+                </div>
+                <div className="form-group">
+                    <button type="button" className="btn btn-success" onClick={this.onAdd}>Create</button>
+                </div>
             </div>
         )
     }
