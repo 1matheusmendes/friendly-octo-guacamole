@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.css';
 //import Todolist from './components/TodolistOLD';
 import TodoListApp from './container/TodoListApp';
 import * as serviceWorker from './serviceWorker';
